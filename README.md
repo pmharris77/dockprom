@@ -3,6 +3,10 @@
 A monitoring solution for Docker hosts and containers with [Prometheus](https://prometheus.io/), [Grafana](http://grafana.org/), [cAdvisor](https://github.com/google/cadvisor),
 [NodeExporter](https://github.com/prometheus/node_exporter) and alerting with [AlertManager](https://github.com/prometheus/alertmanager).
 
+## Fork Information
+
+This project was forked from the original repo due to unresolved issues with the native docker_compose.yml file in the original [repo](https://github.com/stefanprodan/dockprom) with interpolation where escaping is needed for $'s in the ADMIN_PASSWORD_HASH environmental variable, but has not yet been fixed - see issue [here](https://github.com/stefanprodan/dockprom/issues/276)
+
 ## Install
 
 Clone this repository on your Docker host, cd into dockprom directory and run compose up:

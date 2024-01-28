@@ -122,7 +122,7 @@ services:
     container_name: caddy
     ports:
       - "3000:3000"
-      - "8080:8080"
+      - "8800:8080"
       - "9090:9090"
       - "9093:9093"
       - "9091:9091"
@@ -131,7 +131,7 @@ services:
     environment:
       - ADMIN_USER=${ADMIN_USER:-admin}
       - ADMIN_PASSWORD=${ADMIN_PASSWORD:-admin}
-      - ADMIN_PASSWORD_HASH=${ADMIN_PASSWORD_HASH:-$2a$14$1l.IozJx7xQRVmlkEQ32OeEEfP5mRxTpbDTCTcXRqn19gXD8YK1pO}
+      - ADMIN_PASSWORD_HASH=${ADMIN_PASSWORD_HASH:-$$2a$$14$$1l.IozJx7xQRVmlkEQ32OeEEfP5mRxTpbDTCTcXRqn19gXD8YK1pO}
     restart: unless-stopped
     networks:
       - monitor-net
